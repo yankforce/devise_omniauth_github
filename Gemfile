@@ -22,6 +22,24 @@ end
 
 gem 'jquery-rails'
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'jasmine'
+  gem 'factory_girl_rails'
+  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+end
+
+group :development do
+  gem 'awesome_print'
+  gem 'thin'
+  gem 'pry-debugger'
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+  gem 'capistrano'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
