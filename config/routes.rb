@@ -2,6 +2,7 @@ Preunion::Application.routes.draw do
   
 
   devise_for :users
+  match 'auth/failure', to: redirect('/')
 
   root to: 'home#index'
   # The priority is based upon order of creation:
