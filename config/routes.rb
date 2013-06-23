@@ -3,6 +3,7 @@ Preunion::Application.routes.draw do
 
   devise_for :users
   match 'auth/failure', to: redirect('/')
+  match 'auth/:provider/callback', to: 'sessions#create_github'
 
   root to: 'home#index'
   # The priority is based upon order of creation:
